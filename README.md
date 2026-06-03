@@ -1,148 +1,92 @@
-# Task Manager
+# Task Manager - Full Stack Application
 
-A full-stack MERN Task Manager application that helps users create, manage, update, and track tasks efficiently.
+## Project Description
 
-## Features
+This project is a solution for Exercise 1: Personal Task Manager from the Studio Graphene Full Stack Developer Assessment.
 
-### Task Management
+The application allows users to create, view, update, complete, and delete tasks. Users can also filter tasks by status (All, Active, Completed), track task completion, and manage due dates. The application is built using a React frontend, Node.js/Express backend, and MongoDB database.
 
-* Create Tasks
-* Update Tasks
-* Delete Tasks
-* Mark Tasks as Complete
-* Mark Completed Tasks as Active
+---
 
-### Dashboard
+## Live Demo
 
-* Active Tasks Counter
-* Completed Tasks Counter
-* Search Tasks
-* Filter Tasks (All, Active, Completed)
-* Overdue Task Indicator
+Frontend:
+https://task-manager-nxaf.vercel.app
 
-### User Experience
+Backend API:
+https://taskmanager-y94l.onrender.com
 
-* Responsive Design
-* Modern UI
-* Real-Time Updates
-* Loading & Error Handling
+GitHub Repository:
+https://github.com/mugiwarashubham/TaskManager
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-
-* React.js
-* Redux Toolkit
-* Axios
-* Tailwind CSS
-* DaisyUI
-* Vite
+- React
+- Redux Toolkit
+- React Redux
+- Axios
+- Tailwind CSS
+- DaisyUI
+- Vite
 
 ### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- CORS
+- dotenv
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
+### Deployment
+- Vercel (Frontend)
+- Render (Backend)
+- MongoDB Atlas (Database)
 
----
+### Why These Technologies?
 
-## Project Structure
-
-```text
-Taskmanager/
-│
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   └── routes/
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── store/
-│   │   └── utils/
-│   └── package.json
-│
-└── README.md
-```
+- React provides a fast and component-based UI.
+- Redux Toolkit simplifies state management.
+- Axios handles API communication.
+- Express offers lightweight backend development.
+- MongoDB stores task data efficiently.
+- Tailwind CSS and DaisyUI provide rapid UI development.
+- Vercel and Render enable free cloud deployment.
 
 ---
 
-## Installation
+## Features
+
+### Implemented Features
+
+- Create Task
+- View All Tasks
+- Update Task
+- Delete Task
+- Mark Task Complete / Incomplete
+- Task Status Filtering
+- Active Task Counter
+- Completed Task Counter
+- Due Date Support
+- Overdue Task Highlighting
+- Responsive UI
+- Persistent Data Storage using MongoDB
+
+---
+
+## How To Run Locally
+
+### Prerequisites
+
+- Node.js installed
+- MongoDB Atlas connection string
+
+---
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/mugiwarashubham/Taskmanager.git
-```
-
-### Backend Setup
-
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-### Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
----
-
-## API Endpoints
-
-### Create Task
-
-```http
-POST /tasks/create
-```
-
-### Get All Tasks
-
-```http
-GET /tasks/getAllTasks
-```
-
-### Update Task
-
-```http
-PUT /tasks/updateTask/:id
-```
-
-### Delete Task
-
-```http
-DELETE /tasks/delete/:id
-```
-
----
-
-## Future Enhancements
-
-* User Authentication
-* JWT Authorization
-* Task Priority Levels
-* Task Categories
-* Dark Mode
-* Notifications
-* Drag & Drop Task Management
-
----
-
-## Author
-
-**Shubham Kumar**
-
-GitHub: https://github.com/mugiwarashubham
+git clone https://github.com/mugiwarashubham/TaskManager.git
+cd TaskManager
