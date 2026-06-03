@@ -4,7 +4,7 @@ const createTask = async (req, res) => {
   try {
     const task = await Task.create(req.body);
 
-    res.status(201).send("Task Created Successfully");
+    res.status(201).json(task);
   } catch (err) {
     res.status(500).send("Error"+err.message);
   }

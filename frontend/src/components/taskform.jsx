@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createTask } from "../taskslice";
+import { createTask, fetchTasks } from "../taskslice";
 
 function TaskForm() {
   const dispatch = useDispatch();
@@ -11,12 +11,15 @@ function TaskForm() {
     dueDate: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.title.trim()) return;
 
-    dispatch(createTask(formData));
+    await dispatch(createTask(formData));
+
+    // Task create hone ke baad list refresh karo
+    dispatch(fetchTasks());
 
     setFormData({
       title: "",
