@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchTasks } from "../taskslice";
-import TaskForm from "../components/TaskForm";
-import TaskCard from "../components/TaskCard";
+import TaskForm from "../components/taskform";
+import TaskCard from "../components/taskcard";
 
 function HomePage() {
   const dispatch = useDispatch();
