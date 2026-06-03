@@ -1,16 +1,148 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN Task Manager application that helps users create, manage, update, and track tasks efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Task Management
 
-## React Compiler
+* Create Tasks
+* Update Tasks
+* Delete Tasks
+* Mark Tasks as Complete
+* Mark Completed Tasks as Active
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dashboard
 
-## Expanding the ESLint configuration
+* Active Tasks Counter
+* Completed Tasks Counter
+* Search Tasks
+* Filter Tasks (All, Active, Completed)
+* Overdue Task Indicator
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### User Experience
+
+* Responsive Design
+* Modern UI
+* Real-Time Updates
+* Loading & Error Handling
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Redux Toolkit
+* Axios
+* Tailwind CSS
+* DaisyUI
+* Vite
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+
+---
+
+## Project Structure
+
+```text
+Taskmanager/
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   └── routes/
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   └── utils/
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/mugiwarashubham/Taskmanager.git
+```
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## API Endpoints
+
+### Create Task
+
+```http
+POST /tasks/create
+```
+
+### Get All Tasks
+
+```http
+GET /tasks/getAllTasks
+```
+
+### Update Task
+
+```http
+PUT /tasks/updateTask/:id
+```
+
+### Delete Task
+
+```http
+DELETE /tasks/delete/:id
+```
+
+---
+
+## Future Enhancements
+
+* User Authentication
+* JWT Authorization
+* Task Priority Levels
+* Task Categories
+* Dark Mode
+* Notifications
+* Drag & Drop Task Management
+
+---
+
+## Author
+
+**Shubham Kumar**
+
+GitHub: https://github.com/mugiwarashubham
