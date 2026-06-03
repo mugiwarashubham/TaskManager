@@ -70,8 +70,7 @@ function TaskForm() {
         }
       />
 
-      <button
-        className="btn btn-primary"
+      <button className="btn btn-primary"
         type="submit"
       >
         Add Task
