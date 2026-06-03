@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 console.log("🚀 APP STARTED");
+console.log("NODE_ENV =", process.env.NODE_ENV);
 console.log("PORT =", process.env.PORT);
 console.log(
   "DB_CONNECT_STRING =",
@@ -18,6 +19,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Health Check Route
+app.get("/", (req, res) => {
+  res.status(200).send("Task Manager API Running 🚀");
+});
+
+// Task Routes
 app.use("/tasks", taskRoutes);
 
 const PORT = process.env.PORT || 4000;
@@ -33,4 +40,5 @@ main()
   .catch((error) => {
     console.error("❌ Database Connection Failed");
     console.error(error);
+    process.exit(1);
   });
