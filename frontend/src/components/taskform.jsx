@@ -26,14 +26,21 @@ function TaskForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="card bg-base-100 shadow-md p-6 mb-6"
-    >
+   return (
+  <form
+    onSubmit={handleSubmit}
+    className="bg-white rounded-3xl shadow-xl p-8 mb-8"
+  >
+    <h2 className="text-2xl font-bold text-indigo-600 mb-6">
+      Create New Task
+    </h2>
+
+    <div className="grid gap-4">
+
       <input
         type="text"
-        placeholder="Task Title"
-        className="input input-bordered mb-3"
+        placeholder="Enter task title"
+        className="input input-bordered w-full"
         value={formData.title}
         onChange={(e) =>
           setFormData({
@@ -44,8 +51,8 @@ function TaskForm() {
       />
 
       <textarea
-        placeholder="Description"
-        className="textarea textarea-bordered mb-3"
+        placeholder="Enter task description"
+        className="textarea textarea-bordered h-28"
         value={formData.description}
         onChange={(e) =>
           setFormData({
@@ -57,7 +64,7 @@ function TaskForm() {
 
       <input
         type="date"
-        className="input input-bordered mb-3"
+        className="input input-bordered"
         value={formData.dueDate}
         onChange={(e) =>
           setFormData({
@@ -68,13 +75,15 @@ function TaskForm() {
       />
 
       <button
-        className="btn btn-primary"
+        className="btn btn-primary btn-lg"
         type="submit"
       >
-        Add Task
+        ➕ Add Task
       </button>
-    </form>
-  );
+
+    </div>
+  </form>
+);
 }
 
 export default TaskForm;
